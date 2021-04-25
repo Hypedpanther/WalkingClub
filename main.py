@@ -27,6 +27,7 @@ def find_furthest(members):
     return furthest_distance
 
 def find_winners(members, furthest_distance):
+    print("\t\tWalked 70% of the furthest distance")
     for index in range (len(members)):
         if members[index].distance > 0.7*furthest_distance:
             print(members[index].firstname ,members[index].surname)
