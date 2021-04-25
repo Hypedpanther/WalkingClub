@@ -19,7 +19,7 @@ def get_data():
     return members
 
 def find_furthest(members):
-    furthest_distance = members[2].distance
+    furthest_distance = members[0].distance
     for x in range(len(members)):
         if members[x].distance > furthest_distance:
             furthest_distance = members[x].distance
