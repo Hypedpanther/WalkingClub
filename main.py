@@ -6,10 +6,8 @@ class member():
         self.surname = surname
         self.distance = distance
 
-members = []
-
-
 def get_data():
+    members = []
     input_file = open("members-walk.txt", "r")
     data = csv.reader(input_file)
 
