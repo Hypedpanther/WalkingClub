@@ -35,7 +35,9 @@ def find_winners(members, furthest_distance):
 
 
 
-
-members = get_data()
-furthest_distance = find_furthest(members)
-find_winners(members, furthest_distance)
+def main():
+    members = get_data()
+    furthest_distance = find_furthest(members)
+    find_winners(members, furthest_distance)
+if __name__ == "__main__":
+    main()
