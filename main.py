@@ -8,12 +8,10 @@ class member():
 
 def get_data():
     members = []
-    input_file = open("members-walk.txt", "r")
-    data = csv.reader(input_file)
-
-    for line in data:
-        members.append(member(line[0], line[1],float(line[2])))
-    input_file.close()
+    with  open("members-walk.txt", "r") as file:
+        for line in csv.reader(file):
+            members.append(member(line[0], line[1],float(line[2])))
+    
     return members
 
 def find_furthest(members):
@@ -29,8 +27,8 @@ def find_winners(members, furthest_distance):
     for index in range (len(members)):
         if members[index].distance > 0.7*furthest_distance:
             print(members[index].firstname ,members[index].surname)
-            output_file = open("winners.txt", "a")
-            output_file.writelines(members[index].firstname + " " + members[index].surname + "\n")
+            with open("winners.txt", "a") as f:
+                f.writelines(members[index].firstname + " " + members[index].surname + "\n")
 
 
 
